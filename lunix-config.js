@@ -6,6 +6,11 @@
    langsung di GitHub atau secara lokal tanpa harus melakukan build ulang.
 
    PANDUAN EDIT CEPAT:
+   0. Saklar `enabled`:
+      - `enabled: false` -> Mode Partner (menu & link Gaji/TPP/modul disembunyikan,
+        Claire fokus menemani ngobrol & ekspresi).
+      - `enabled: true`  -> Mode Portal LuniX aktif kembali secara otomatis tanpa
+        perlu build ulang!
    1. Untuk mengganti atau mengisi link: ubah nilai `url: '...'`.
    2. Jika link belum tersedia, biarkan `url: ''` (akan tampil nonaktif/segera hadir).
    3. Hanya link berawalan https:// atau http:// yang bisa diklik dan akan
@@ -18,6 +23,9 @@
   'use strict';
 
   global.LUNIX_CONFIG = {
+    // Ubah ke `true` kapan saja untuk mengaktifkan kembali menu & link LuniX
+    enabled: false,
+
     // Judul & deskripsi menu utama 8 modul LuniX di chat Claire
     title: 'Modul Layanan LuniX',
     description: 'Pilih modul yang ingin kamu akses. Tautan akan dibuka di tab baru.',
